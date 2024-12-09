@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var etiqueta_1 = require("./etiqueta");
+var teclado = require("readline-sync");
+console.log("Qual a descri\u00E7\u00E3o do produto:");
+var description = teclado.question();
+console.log("qual o peso do produto:");
+var peso = teclado.questionFloat();
+console.log("qual o pre\u00E7o do produto:");
+var preco = teclado.questionFloat();
+var produto = new etiqueta_1.default(description, peso, preco);
+console.log(produto.toString());

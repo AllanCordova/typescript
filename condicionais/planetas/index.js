@@ -1,0 +1,10 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var planetas_1 = require("./planetas");
+var teclado = require("readline-sync");
+console.log("Qual seu peso atual:");
+var peso = teclado.questionInt();
+console.log("escolha com um n\u00FAmero inteiro para ver seu peso em outros planetas:\n1. Merc\u00FArio: 0,37 kg;\n2. V\u00EAnus: 0,88 kg;\n3. Terra: 1,00 kg;\n4. Marte: 0,38 kg;\n5. J\u00FApiter: 2,64 kg;\n6. Saturno: 1,15 kg;\n7. Urano: 1,17 kg;\n8. Netuno: 1,18 kg;\n9. Plut\u00E3o: 0,11 kg");
+var escolha = teclado.questionInt();
+var planeta = new planetas_1.default(escolha, peso);
+console.log("Voc\u00EA teria ".concat(planeta.weight().toFixed(2), " Kg no planeta escolhido !"));

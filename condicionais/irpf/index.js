@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var imposto_1 = require("./imposto");
+var allan = new imposto_1.default(5600);
+console.log("".concat(allan.toString()));
+var maria = new imposto_1.default(1500);
+console.log("".concat(maria.toString()));
+var paulo = new imposto_1.default(2900);
+console.log(paulo.toString());
+var julia = new imposto_1.default(4200);
+console.log(julia.toString());

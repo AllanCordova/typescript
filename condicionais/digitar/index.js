@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var calculadora_1 = require("./calculadora");
+var teclado = require("readline-sync");
+console.log("Digite o tempo em segundos:");
+var segundos = teclado.questionInt();
+console.log("Digite a quantidade de caracteres digitados:");
+var letras = teclado.questionInt();
+var allan = new calculadora_1.default(segundos, letras);
+var maria = new calculadora_1.default();
+console.log("Allan escreveu uma media de ".concat(allan.forMinuto(), " caracteres/minuto"));
+console.log("Maria escreveu uma media de ".concat(maria.forMinuto(), " caracteres/minuto"));

@@ -1,0 +1,11 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var academico_1 = require("./academico");
+var allan = new academico_1.default(8, 0.8);
+console.log("Aluno foi ".concat(allan.aprovado()));
+var maria = new academico_1.default(5, 0.75);
+console.log("Aluno foi ".concat(maria.aprovado()));
+var pedro = new academico_1.default(3, 0.75);
+console.log("Aluno foi ".concat(pedro.aprovado()));
+var albert = new academico_1.default(10, 0.67);
+console.log("Aluno foi ".concat(albert.aprovado()));

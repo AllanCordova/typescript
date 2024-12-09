@@ -1,0 +1,12 @@
+"use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+var poligono_1 = require("./poligono");
+var teclado = require("readline-sync");
+console.log("Digite o primeiro valor:");
+var medidaA = teclado.questionInt();
+console.log("Digite o segundo valor:");
+var medidaB = teclado.questionInt();
+console.log("Digite o terceiro valor:");
+var medidaC = teclado.questionInt();
+var triangulo = new poligono_1.default();
+console.log("A existencia do triangulo \u00E9 ".concat(triangulo.tIsreal(medidaA, medidaB, medidaC)));
