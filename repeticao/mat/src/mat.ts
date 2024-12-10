@@ -103,8 +103,81 @@ export default class InteiroMatematico {
 
         while(mult < this.n) {
             mult = i * (i + 1) * (i + 2);
+            i++
         }
 
         return (mult == this.n);
+    }
+
+    public isSomaDosQuadrados(): boolean {
+        let cent: number = Math.floor(this.n / 100),
+            dez: number = this.n % 100;
+        const quadrado: number = (cent + dez) ** 2;
+        
+        return (quadrado == this.n);
+    }
+
+    public maiorDivisor(): number {
+        if (this.n <= 1) {
+            return 1;
+        }
+        let maior: number = 0;
+        for (let i: number = 2; i <= this.n / 2; i++) {
+            if (this.n % i == 0) {
+                maior = i;
+            }
+        }
+
+        return maior;
+    }
+
+    public menorDivisor(): number {
+        if (this.n <= 1) {
+            return 1;
+        }
+        for (let i: number = 2; i <= this.n / 2; i++) {
+            if (this.n % i == 0) {
+                return i;
+            }
+        }
+        return 1;
+    }
+
+    public mdc(m: number): number {
+        let mdc: number = 1,
+            div: number = 2;
+        while (this.n > 1 && m > 1) {
+            if (this.n % div == 0 && m % div == 0) {
+                mdc *= div;
+            }
+            if (this.n % div == 0) {
+                this.n /= div;
+                div = 2;
+            }
+            if (m % div == 0) {
+                m /= div;
+                div = 2;
+            }
+            if (!(m % div == 0 && this.n % div == 0)) {
+                div += 1;
+            }
+        }
+        return mdc;
+    }
+
+    public mdcEficiente(m: number): number {
+        let dividendo: number = Math.max(this.n, m),
+            divisor: number = Math.min(this.n, m),
+            mdc: number = divisor,
+            resto: number = dividendo % divisor;
+        while (resto != 0) {
+            dividendo = divisor;
+            divisor = resto;
+            if (divisor > 0) {
+                mdc = divisor;
+            }
+            resto = dividendo % divisor;
+        }
+        return mdc;
     }
 }
