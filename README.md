@@ -22,6 +22,12 @@ Este repositório contém exercícios práticos desenvolvidos em **TypeScript**,
   - Operações matemáticas
   - Funções
 
+- **`Arrays lista`**  
+  Conjunto de exercícios diversos cobrindo conceitos de matrizes unidimensionais e bidimensionais, como:
+  - busca em arrays
+  - filtragens em listas
+  - e armazenamento de dados
+
 - **`poo/`**  
   Exercícios voltados para Programação Orientada a Objetos:
   - Classes e objetos
