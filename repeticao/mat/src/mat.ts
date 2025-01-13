@@ -180,4 +180,19 @@ export default class InteiroMatematico {
         }
         return mdc;
     }
+
+    public divisoresComuns(m: number): number {
+        let cont: number = 0;
+        if (this.n == m) {
+            cont = 2;
+        } 
+        cont = 1;
+        const maior: number = Math.max(this.n, m);
+        for (let i: number = 2; i <= maior / 2; i++) {
+            if (this.n % i == 0 && m % i == 0) {
+                cont += 1;
+            }
+        }
+        return cont;
+    }
 }
