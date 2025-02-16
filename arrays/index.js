@@ -1,8 +1,13 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var mat_1 = require("./mat");
-var matematica = new mat_1.default(22);
-console.log(matematica.getDivisores());
-console.log(matematica.serieDeFibonacci());
-console.log(matematica.serieDeTribonacci());
-console.log(matematica.getPrimos());
+var matriz_1 = require("./matriz");
+var matriz = new matriz_1.default(3, 3);
+var lista = matriz.somaLinhaColuna();
+matriz.toString(lista);
+var array = matriz.transposta();
+matriz.toString(array);
+console.log(matriz.multArrays([
+    [2, 2, 3],
+    [2, 2, 4],
+    [4, 1, 3],
+]));

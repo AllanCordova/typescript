@@ -1,11 +1,19 @@
-import InteiroMatematico from "./mat";
+import matrizAleatoria from "./matriz";
 
-const matematica: InteiroMatematico = new InteiroMatematico(22);
+const matriz: matrizAleatoria = new matrizAleatoria(3, 3);
 
-console.log(matematica.getDivisores());
+const lista: number[][] = matriz.somaLinhaColuna();
 
-console.log(matematica.serieDeFibonacci());
+matriz.toString(lista);
 
-console.log(matematica.serieDeTribonacci());
+const array: number[][] = matriz.transposta();
 
-console.log(matematica.getPrimos());
+matriz.toString(array);
+
+console.log(
+  matriz.multArrays([
+    [2, 2, 3],
+    [2, 2, 4],
+    [4, 1, 3],
+  ])
+);
